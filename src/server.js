@@ -5,7 +5,7 @@ import "dotenv/config";
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
-
+app.use(express.json());
 app.use(cors());
 app.use(
   pino({
@@ -53,4 +53,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
