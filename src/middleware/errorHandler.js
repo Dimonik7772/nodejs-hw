@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { HttpError } from "http-errors";
 
 export const errorHandler = (err, req, res, next) => {
@@ -8,7 +7,7 @@ export const errorHandler = (err, req, res, next) => {
     });
   }
 
-  const isProduction = process.env.Node_ENV === "production";
+  const isProduction = process.env.NODE_ENV === "production";
   res.status(500).json({
     message: isProduction
       ? "Something went wrong. Please try again later."
