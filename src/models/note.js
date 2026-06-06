@@ -20,6 +20,7 @@ const noteSchema = new Schema(
       required: false,
       default: "Todo",
       enum: TAGS,
+      index: true,
     },
   },
   {
