@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import "dotenv/config";
-import { Note } from "../models/note";
+import { Note } from "../models/note.js";
 
 export const connectMongoDB = async () => {
   try {
