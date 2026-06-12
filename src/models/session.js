@@ -23,6 +23,7 @@ const sessionSchema = new Schema(
       required: true,
     },
   },
-  { versionKey: false },
+  { timestamps:true,
+    versionKey: false },
 );
 export const Session = model("Session", sessionSchema);

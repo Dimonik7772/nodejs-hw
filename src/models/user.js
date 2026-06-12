@@ -3,7 +3,7 @@ import { emailRegex } from "../constants/emailRegex.js";
 
 const userSchema = new Schema(
   {
-    usename: {
+    username: {
       type: String,
       trim: true,
     },
@@ -28,10 +28,9 @@ userSchema.pre(
       this.username = this.email;
     }
   },
-  { versionKey: false },
 );
 
-userSchema.methods.toJson = function () {
+userSchema.methods.toJSON = function () {
   const obj = this.toObject();
   delete obj.password;
   return obj;
