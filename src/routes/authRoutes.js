@@ -10,7 +10,7 @@ import {
   logoutUser,
   refreshUserSession,
   registerUser,
-  requestResetEamil,
+  requestResetEmail,
   resetPassword,
 } from "../controllers/authController.js";
 import { celebrate } from "celebrate";
@@ -28,7 +28,7 @@ router.post("/auth/refresh", refreshUserSession);
 router.post(
   "/auth/reset-Email",
   celebrate(requestResetEmailSchema),
-  requestResetEamil,
+  requestResetEmail,
 );
 
 router.post(
